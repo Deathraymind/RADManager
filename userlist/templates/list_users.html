@@ -1,0 +1,19 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <h1>User List</h1>
+    <ul class="user-list">
+        {% for user in users %}
+            <li class="user-item">
+                {{ user.cn }}<br>
+                <form method="post" action="{% url 'reset_password' user.cn %}">
+                    {% csrf_token %}
+                    <button type="submit">Reset Password</button>
+                </form>
+            </li>
+            <div class="sidebar-menu-separator"></div> <!-- Separator line between users -->
+        {% empty %}
+            <li>No users found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
