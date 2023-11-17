@@ -1,0 +1,11 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <h1>Welcome to RADManager</h1>
+    <div class="button-container">
+        <a href="{% url 'admin:index' %}" class="btn">Admin</a>
+        <a href="{% url 'adduser:add_user' %}" class="btn">Add User</a>
+        <a href="{% url 'userlist:list_users' %}" class="btn">List Users</a>
+    </div>
+{% endblock %}
+
