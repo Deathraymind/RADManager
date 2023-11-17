@@ -1,0 +1,12 @@
+<!-- settingsapp/templates/edit_settings.html -->
+
+{% extends 'base_template.html' %}
+
+{% block content %}
+<h1>Edit App Settings</h1>
+<form method="post" action="{% url 'settingsapp:edit_settings' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
