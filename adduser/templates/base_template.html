@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RADManager</title>
+    <style>
+        /* Background color */
+        body {
+            background-color: #333; /* Dark gray background color for the entire page */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Use a common web font */
+        }
+
+        /* Banner styling */
+        .banner {
+            background-color: rgb(31, 123, 216); /* Blue background color for the banner */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Banner subtext */
+        .banner-subtext {
+            font-size: 12px;
+            color: #ccc; /* Light gray color for subtext */
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 120px; /* Adjust the width as needed */
+            background-color: #f0f0f0; /* Light gray background color for the sidebar */
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        /* Sidebar link styling */
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #333; /* Dark gray text color for sidebar links */
+        }
+
+        /* Sidebar link hover effect */
+        .sidebar a:hover {
+            background-color: #ddd; /* Light gray hover background color for sidebar links */
+        }
+
+        /* Sidebar menu separator */
+        .sidebar-menu-separator {
+            margin: 10px 0;
+            border-top: 1px solid #ccc; /* Light gray separator line */
+        }
+
+        /* Main content styling */
+        .content {
+            margin-left: 200px; /* Match the width of the sidebar */
+            padding: 20px;
+        }
+
+        /* Style for the "User List" text */
+        .content h1 {
+            color: #cac8c8; /* Light gray text color for "User List" */
+        }
+
+        /* List of users styling */
+        .user-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* User item styling */
+        .user-item {
+            border: 1px solid #524f4f; /* Light gray border around each user item */
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #cac8c8; /* Light gray text color for user details */
+            font-family: 'Arial, sans-serif'; /* Use the same common web font */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Banner -->
+<div class="banner">
+    <h1>RADManager</h1>
+    <div class="banner-subtext">Made by Bowyn </div>
+    <div class="banner-subtext">Just a R-AD Manager </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="/main/" class="sidebar-link">Home</a> <!-- Add a link to the home page -->
+    <div class="sidebar-menu-separator"></div> <!-- Separator line -->
+    <a href="/admin/" class="sidebar-link">Admin</a> <!-- Add a link to the admin page -->
+    <div class="sidebar-menu-separator"></div> <!-- Separator line -->
+    <a href="/adduser/add_user/" class="sidebar-link">Add User</a>
+    <div class="sidebar-menu-separator"></div> <!-- Separator line -->
+    <a href="/userlist/list_users/" class="sidebar-link">List Users</a>
+    <div class="sidebar-menu-separator"></div> <!-- Separator line -->
+    <a href="/settingsapp/settings/" class="sidebar-link">Settings</a>
+</div>
+
+<!-- Main content -->
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

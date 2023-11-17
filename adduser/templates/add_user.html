@@ -1,0 +1,23 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <h2 style="color: #cac8c8;">Add User</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="{{ form.username.id_for_label }}" style="color: #cac8c8;">Username:</label>
+            {{ form.username }}
+        </div>
+        <div class="form-field">
+            <label for="{{ form.password.id_for_label }}" style="color: #cac8c8;">Password:</label>
+            {{ form.password }}
+        </div>
+        <button type="submit">Add User</button>
+    </form>
+    <style>
+        /* Add spacing between form fields */
+        .form-field {
+            margin-bottom: 15px; /* Adjust the spacing as needed */
+        }
+    </style>
+{% endblock %}
